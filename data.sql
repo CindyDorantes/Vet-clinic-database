@@ -6,3 +6,9 @@ INSERT INTO animals ( name, date_of_birth, escape_attempts, neutered, weight_kg)
 ('Pikachu','2021-01-07',1,FALSE,15.04),
 ('Devimon','2017,05,12',1,FALSE,15.04);
 
+UPDATE animals
+SET date_of_birth = '2017-05-12',
+  escape_attempts = 5,
+  neutered = TRUE,
+  weight_kg = 11.0
+WHERE name = 'Devimon';
