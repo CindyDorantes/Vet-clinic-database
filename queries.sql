@@ -178,12 +178,13 @@ LEFT JOIN specializations SZ ON V.id = SZ.vet_id
 LEFT JOIN species S ON SZ.species_id = S.id;
 -- List all animals that visited Stephanie Mendez between 
 -- April 1st and August 30th, 2020.
-SELECT A.name
+SELECT A.name, VS.date_of_visit
 FROM animals A
 JOIN visits VS ON A.id = VS.animal_id
 JOIN vets V ON VS.vet_id = V.id
 WHERE V.name = 'Stephanie Mendez'
-GROUP BY A.name;
+AND VS.date_of_visit BETWEEN '2020-04-01' AND '2020-09-30'
+ORDER BY VS.date_of_visit;
 -- What animal has the most visits to vets?
 SELECT A.name, COUNT(V.date_of_visit) as visit_counter
 FROM animals A
