@@ -35,3 +35,61 @@ VALUES ('Charmander', '2020-02-08', 0, FALSE, 11.0),
 UPDATE animals
   SET weight_kg = -45.0
   WHERE name = 'Angemon';
+
+-- Insert data into the owners table
+INSERT INTO owners (
+  full_name,
+  age
+)
+VALUES ('Sam Smith', 34),
+('Jennifer Orwell', 19),
+('Bob', 45),
+('Melody Pond', 77),
+('Dean Winchester', 14),
+('Jodie Whittaker', 38);
+
+-- Insert data into the species table
+INSERT INTO species (
+  name
+)
+VALUES ('Pokemon'), ('Digimon');
+
+-- Modify your inserted animals
+UPDATE animals
+  SET species_id = 2
+  WHERE name LIKE '%mon';
+UPDATE animals
+  SET species_id = 1
+  WHERE name NOT LIKE '%mon';
+
+-- Modify your inserted animals to include owner information
+UPDATE animals
+  SET owner_id = 1
+  WHERE name = 'Agumon';
+UPDATE animals
+  SET owner_id = 2
+  WHERE name = 'Gabumon';
+UPDATE animals
+  SET owner_id = 2
+  WHERE name = 'Pikachu';
+UPDATE animals
+  SET owner_id = 3
+  WHERE name = 'Devimon';
+UPDATE animals
+  SET owner_id = 3
+  WHERE name = 'Plantmon';
+UPDATE animals
+  SET owner_id = 4
+  WHERE name = 'Charmander';
+UPDATE animals
+  SET owner_id = 4
+  WHERE name = 'Squirtle';
+UPDATE animals
+  SET owner_id = 4
+  WHERE name = 'Blossom';
+UPDATE animals
+  SET owner_id = 5
+  WHERE name = 'Angemon';
+UPDATE animals
+  SET owner_id = 5
+  WHERE name = 'Boarmon';
