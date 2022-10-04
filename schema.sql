@@ -78,4 +78,5 @@ CREATE TABLE visits (
   PRIMARY KEY(animal_id, vet_id, date_of_visit)
 );
 
+-- Add an email column to your owners table
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
